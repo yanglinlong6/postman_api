@@ -1,0 +1,132 @@
+{
+  "info": {
+    "_postman_id": "51becffa-8442-4761-85e9-cda7afde0e34",
+    "name": "乔安SDK",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "设备列表",
+      "id": "86f15e98-a937-4292-b70e-15b5e95c95a2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"force_query_bind\": \"1\",\r\n    \"header\": {\r\n        \"package_name\": \"QiaoAn.vmsToolsApp\",\r\n        \"seqno\": 1719367081182,\r\n        \"token\": \"e0b5c68cb6bc44c19695\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\"\r\n    },\r\n    \"page\": {\r\n        \"from\": 0,\r\n        \"mode\": 1,\r\n        \"shareFrom\": 0,\r\n        \"size\": 10\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v4/am/query_device_list",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v4",
+            "am",
+            "query_device_list"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "新增公司",
+      "id": "a08423c8-a3df-47fc-b6af-9c2a4827e8b4",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://192.168.16.17:31474/v1/user/query",
+      "id": "4c3318e9-1fc2-4482-8290-121682ceca44",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json, text/javascript, */*; q=0.01"
+          },
+          {
+            "key": "Accept-Language",
+            "value": "zh-CN,zh;q=0.9"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded; charset=UTF-8"
+          },
+          {
+            "key": "Origin",
+            "value": "http://192.168.16.17:31474"
+          },
+          {
+            "key": "Referer",
+            "value": "http://192.168.16.17:31474/pages/user.html?0.7139428036388946"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+          },
+          {
+            "key": "X-Requested-With",
+            "value": "XMLHttpRequest"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/v1/sdk/company_info?page=5&limit=10&access_token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsImV4cCI6MTczNTk1MzkyOX0.Mo-nmKoGWZ9Q5a8TCGwFHH_QIYN6uZ48cDGikLoJZ8E",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "v1",
+            "sdk",
+            "company_info"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "5"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "access_token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsImV4cCI6MTczNTk1MzkyOX0.Mo-nmKoGWZ9Q5a8TCGwFHH_QIYN6uZ48cDGikLoJZ8E"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl 'http://192.168.16.17:31474/v1/user/query' \\\r\n  -H 'Accept: application/json, text/javascript, */*; q=0.01' \\\r\n  -H 'Accept-Language: zh-CN,zh;q=0.9' \\\r\n  -H 'Connection: keep-alive' \\\r\n  -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' \\\r\n  -H 'Origin: http://192.168.16.17:31474' \\\r\n  -H 'Referer: http://192.168.16.17:31474/pages/user.html?0.7139428036388946' \\\r\n  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' \\\r\n  -H 'X-Requested-With: XMLHttpRequest' \\\r\n  --data-raw 'page=5&limit=10&access_token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNCIsImV4cCI6MTczNTk1MzkyOX0.Mo-nmKoGWZ9Q5a8TCGwFHH_QIYN6uZ48cDGikLoJZ8E&searchKey=&searchValue=' \\\r\n  --insecure"
+      },
+      "response": []
+    }
+  ]
+}

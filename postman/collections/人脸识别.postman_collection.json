@@ -1,0 +1,810 @@
+{
+  "info": {
+    "_postman_id": "1bb7187a-70a7-42a0-99c3-3200066abba9",
+    "name": "人脸识别",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "V3获取人脸列表",
+      "id": "667f0475-a6b3-4b58-82d2-735b8a66325c",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"JAA62A3M7LQAS2EN6111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"91006a5e18fe3d63a36bc05c520416b5\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"ae5d2754435e499f84af\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"sourceType\": 1,\r\n    \"faceType\": 1,\r\n    \"page\": {\r\n        \"nextStartRowKey\": \"0\",\r\n        \"size\": 1\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/face/getFaceList",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "face",
+            "getFaceList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "V3删除人脸特征",
+      "id": "2c185399-8065-4f3d-b46c-cbe211306772",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"JAA62A3M7LQAS2EN6111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"91006a5e18fe3d63a36bc05c520416b5\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"ae5d2754435e499f84af\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    // \"faceIdList\": [\r\n    //     1933710208022566095\r\n    // ],\r\n    \"faceNoList\": [\r\n        \"112213\"\r\n    ],\r\n    \"sourceType\": 1,\r\n    \"faceType\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/face/deleteFaceFeatureInfo",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "face",
+            "deleteFaceFeatureInfo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "V3保存人脸特征",
+      "id": "1f8dbb4e-8865-4848-8926-f6a125359d41",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"JAA62A3M7LQAS2EN6111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"91006a5e18fe3d63a36bc05c520416b5\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"ae5d2754435e499f84af\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"faceNo\": \"112213\",\r\n    \"faceEigenvalue\": \"12123123\",\r\n    \"faceName\": \"demoData3\",\r\n    \"objectKey\": \"demoData\",\r\n    \"sourceType\": 1,\r\n    \"faceType\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/face/saveFaceFeatureInfo",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "face",
+            "saveFaceFeatureInfo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "V3更新人脸名称",
+      "id": "b95aa4f1-ea77-49d6-a654-f70756dba83d",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"JAA62A3M7LQAS2EN6111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"91006a5e18fe3d63a36bc05c520416b5\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"ae5d2754435e499f84af\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"faceName\": \"demoData\",\r\n    \"updateId\": 1,\r\n    \"sourceType\": 1,\r\n    \"faceType\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/face/updateFaceName",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "face",
+            "updateFaceName"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "V3获取图片地址",
+      "id": "01786284-b024-4bb8-8d36-515cf76df06d",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"JAA62A3M7LQAS2EN6111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"91006a5e18fe3d63a36bc05c520416b5\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"ae5d2754435e499f84af\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"faceName\": \"demoData\",\r\n    \"updateId\": 1,\r\n    \"sourceType\": 1,\r\n    \"faceType\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/face/getImgUrl",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "face",
+            "getImgUrl"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "V3获取图片上传地址 Copy",
+      "id": "33392a09-dec3-446f-ad03-b627802eb49d",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"JAA62A3M7LQAS2EN6111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"91006a5e18fe3d63a36bc05c520416b5\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"ae5d2754435e499f84af\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"faceName\": \"demoData\",\r\n    \"updateId\": 1,\r\n    \"sourceType\": 1,\r\n    \"faceType\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/face/getUploadUrl",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "face",
+            "getUploadUrl"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "手动同步人脸",
+      "id": "e0d9e493-643c-480b-98ad-8cc67970a09d",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"8H3CEYKFM3CGA7B4111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"91006a5e18fe3d63a36bc05c520416b5\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"ae5d2754435e499f84af\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"faceNo\": \"0\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/face/syncFaceFeatureInfo",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "face",
+            "syncFaceFeatureInfo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "V4删除人脸特征",
+      "id": "a41b3743-ee56-4ffe-8f9c-083adcf57e3f",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"JAA62A3M7LQAS2EN6111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"91006a5e18fe3d63a36bc05c520416b5\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"ae5d2754435e499f84af\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"faceIdList\": [\r\n        1\r\n    ],\r\n    \"faceNoList\": [\r\n        \"demoData\"\r\n    ],\r\n    \"sourceType\": 1,\r\n    \"faceType\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/api/am/face/v4/deleteFaceFeatureInfo",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "api",
+            "am",
+            "face",
+            "v4",
+            "deleteFaceFeatureInfo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "V4保存人脸特征",
+      "id": "933c02d1-6fbe-4069-816b-2ee018307997",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": \"GVU1DAMNRSRQ3727111A\",\r\n        \"seqno\": \"202506271403127326655034531606\",\r\n        \"user_id\": \"a62c6bb0bc86324ab77e3cf6ef18a26e\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.19.97\",\r\n        \"token\": \"b7a0cab9cfe74bb8b911\",\r\n        \"phone_model\": \"MEIZU 20\"\r\n    },\r\n    \"faceName\": \"123456\",\r\n    \"objectKey\": \"face-feature/default/image/a62c6bb0bc86324ab77e3cf6ef18a26e/20250627140308.jpg\",\r\n    \"sourceType\": 0,\r\n    \"faceType\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/api/am/face/v4/saveFaceFeatureInfo",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "api",
+            "am",
+            "face",
+            "v4",
+            "saveFaceFeatureInfo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "V4更新人脸名称",
+      "id": "78583f4d-68ea-4fac-bcc8-8f560207fdff",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"JAA62A3M7LQAS2EN6111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"91006a5e18fe3d63a36bc05c520416b5\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"ae5d2754435e499f84af\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"faceName\": \"demoData02\",\r\n    \"updateId\": 1,\r\n    \"sourceType\": 1,\r\n    \"faceType\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/api/am/face/v4/updateFaceName",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "api",
+            "am",
+            "face",
+            "v4",
+            "updateFaceName"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "V4获取人脸列表",
+      "id": "19574f74-5c64-46a0-bac0-9ae81d6abc63",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"user_id\": \"07d573a853da352591640b7607069e3c\",\r\n        \"token\": \"8f89a92517174f9ea59b\",\r\n        \"seqno\": \"202507020955226149952953150104\",\r\n        \"device_list\": [\r\n            \"CBKC915YMH1RJKML111A\"\r\n        ],\r\n        \"auth_mode\": null,\r\n        \"sign\": null,\r\n        \"device\": null,\r\n        \"client_version\": \"5.3.20.06\",\r\n        \"language\": \"zh_CN\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"phone_model\": \"vivo Y85A\"\r\n    },\r\n    \"sourceType\": 0,\r\n    \"faceType\": 0,\r\n    \"page\": {\r\n        \"nextStartRowKey\": null,\r\n        \"size\": 1500\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/api/am/face/v4/getFaceList",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "api",
+            "am",
+            "face",
+            "v4",
+            "getFaceList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "V4获取相似人脸",
+      "id": "37ba6bb5-4643-4037-b532-505c4b2999e9",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"header\": {\r\n    \"device_list\": \"SM2VSJ4LSP81CDSM111A\",\r\n    \"seqno\": \"202506262241192571295340031584\",\r\n    \"user_id\": \"d01f8f193e1e3fa7928d5b67b98804f1\",\r\n    \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n    \"language\": \"zh_CN\",\r\n    \"client_version\": \"5.3.19.97\",\r\n    \"token\": \"6bce992810b348dea1ca\",\r\n    \"phone_model\": \"25053RT47C\"\r\n  },\r\n  \"faceNo\": \"456955677\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/api/am/face/v4/getSimilarFaceFeatureList",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "api",
+            "am",
+            "face",
+            "v4",
+            "getSimilarFaceFeatureList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "根据FaceNo集合获取人脸特征信息",
+      "id": "7f61a31d-e029-47ff-95b9-2cbe72511118",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"G7CR34FPFRV8GVBE111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"2431bdfbe229323d80a0e7d4b290b6b6\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"23818a7979f443dfbd4d\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"faceNoList\": [\r\n        \"205380234\",\r\n        \"2238282\"\r\n    ],\r\n    \"sourceType\": 0,\r\n    \"faceType\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/api/am/face/v4/getFaceFeatureInfoByFaceNoList",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "api",
+            "am",
+            "face",
+            "v4",
+            "getFaceFeatureInfoByFaceNoList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "根据FaceNo集合获取人脸特征信息 Copy",
+      "id": "024ffa2a-7677-45f0-820e-b6257dcb3b5a",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"system_version\": \"15\",\r\n    \"header\": {\r\n        \"language\": \"zh_CN\",\r\n        \"seqno\": \"202507041408254631102194633899\",\r\n        \"token\": \"78204e87f8a1460f9670\",\r\n        \"user_id\": \"dfffcac38a083ddba7635e8ac791a7c7\",\r\n        \"device_list\": [\r\n            \"V2EHTCAWNU31RAWR111A\"\r\n        ],\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"client_version\": \"5.3.20.06\",\r\n        \"phone_model\": \"25053RT47C\"\r\n    },\r\n    \"app_version\": \"5.3.20.06\",\r\n    \"phone_model\": \"25053RT47C\",\r\n    \"sourceType\": 0,\r\n    \"faceType\": 0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/api/am/face/v4/getAllFaceNoListByFaceType",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "api",
+            "am",
+            "face",
+            "v4",
+            "getAllFaceNoListByFaceType"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "V4矫正人脸",
+      "id": "4903b435-2700-4c35-b799-0c3d7792c2ae",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"JAA62A3M7LQAS2EN6111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"91006a5e18fe3d63a36bc05c520416b5\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"ae5d2754435e499f84af\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"deviceId\": \"demoData\",\r\n    \"faceNo\": \"demoData\",\r\n    \"correctionFaceId\": 1,\r\n    \"correctionType\": 1,\r\n    \"faceName\": \"demoData\",\r\n    \"unknown\": 1,\r\n    \"rowKey\": \"demoData\",\r\n    \"suggestType\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/api/am/face/v4/correctionSimilarFace",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "api",
+            "am",
+            "face",
+            "v4",
+            "correctionSimilarFace"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "V4获取人脸导入进度",
+      "id": "aaf246cc-d466-4efe-9f73-3bd0bbb7b63c",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"JAA62A3M7LQAS2EN6111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"91006a5e18fe3d63a36bc05c520416b5\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"ae5d2754435e499f84af\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"faceId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/api/am/face/v4/getImportFaceProgress",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "api",
+            "am",
+            "face",
+            "v4",
+            "getImportFaceProgress"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "云存列表",
+      "id": "07bf51ed-c7aa-452d-91be-67aae7a69435",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"client_version\": \"5.3.20.06\",\r\n        \"device_list\": [\r\n            \"CBKC915YMH1RJKML111A\"\r\n        ],\r\n        \"language\": \"zh_CN\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"phone_model\": \"vivo Y85A\",\r\n        \"seqno\": \"202507031155031802261358529284\",\r\n        \"token\": \"cdfe34d81c364f14bc89\",\r\n        \"user_id\": \"07d573a853da352591640b7607069e3c\"\r\n    },\r\n    \"page\": {\r\n        \"from\": 0,\r\n        \"index\": 1,\r\n        \"mode\": 1,\r\n        \"size\": 20\r\n    },\r\n    \"warn_date\": \"20250703\",\r\n    \"warn_scene\": \"\",\r\n    \"warn_type\": \"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/event/listWarnMsg",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "event",
+            "listWarnMsg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "根据rowKey获取单条告警消息",
+      "id": "0b1ce45e-207a-4dcc-af85-2e55e0dadf59",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"header\": {\r\n    \"device_list\": [\r\n      \"MMWUNPVA4PPAVX2K111A\"\r\n    ],\r\n    \"seqno\": \"202507080346417338479266502576\",\r\n    \"user_id\": \"0b3fd8456a9837dbb73aeaa31e475bc7\",\r\n    \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n    \"language\": \"zh_CN\",\r\n    \"client_version\": \"5.3.20.06\",\r\n    \"token\": \"69341086fe2f4fabbcd9\",\r\n    \"phone_model\": \"25053RT47C\"\r\n  },\r\n  \"rowKey\": \"7a3b09eb6b0c5896a856b0084ab87dde2025070803:39:41144403f5\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/event/getWarnMsgByRowKey",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "event",
+            "getWarnMsgByRowKey"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "云存消息列表类型",
+      "id": "f5d61881-ed9d-45de-baf9-eaa4ae9ec80e",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"JAA62A3M7LQAS2EN6111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"91006a5e18fe3d63a36bc05c520416b5\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"ae5d2754435e499f84af\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"warn_date\": \"20250614\",\r\n    \"page\": {\r\n        \"mode\": 1,\r\n        \"from\": 0,\r\n        \"size\": 200,\r\n        \"index\": 0\r\n    },\r\n    \"faceNo\": \"2133123\",\r\n    \"correctionFaceNoList\": [\r\n        \"123\",\r\n        \"4556\"\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v2/event/getWarnTypeList",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v2",
+            "event",
+            "getWarnTypeList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "云存消息列表类型新接口",
+      "id": "275079f2-1c57-42c4-ade7-db9befbc21c4",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"JAA62A3M7LQAS2EN6111A\"\r\n        ],\r\n        \"seqno\": \"202506141130198196237664744981\",\r\n        \"user_id\": \"91006a5e18fe3d63a36bc05c520416b5\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.20.00\",\r\n        \"token\": \"ae5d2754435e499f84af\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v2/event/getV3WarnTypeList",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v2",
+            "event",
+            "getV3WarnTypeList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "VMS陌生人脸查询",
+      "id": "89cf38b4-6ba4-4789-8c9f-82164e1f0bcb",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"deviceId\": \"GVU1DAMNRSRQ3727111A\",\r\n    \"endDate\": \"2025-06-27\",\r\n    \"header\": {\r\n        \"client_version\": \"2.0.3.15\",\r\n        \"language\": \"zh_CN\",\r\n        \"package_name\": \"QiaoAn.vmsToolsApp\",\r\n        \"phone_model\": \"BNE-AL00\",\r\n        \"seqno\": 1750937061955,\r\n        \"token\": \"43e4b975172f4b969622\",\r\n        \"user_id\": \"a62c6bb0bc86324ab77e3cf6ef18a26e\"\r\n    },\r\n    \"size\": 15,\r\n    \"startDate\": \"2025-06-20\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/api/vms/face/v3/queryStrangeFace",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "api",
+            "vms",
+            "face",
+            "v3",
+            "queryStrangeFace"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "VMS人脸详情",
+      "id": "30d50093-3893-462d-a4e6-f6bccdc66dff",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"client_version\": \"2.0.3.15\",\r\n        \"language\": \"zh_CN\",\r\n        \"package_name\": \"QiaoAn.vmsToolsApp\",\r\n        \"phone_model\": \"BNE-AL00\",\r\n        \"seqno\": 1750941108493,\r\n        \"token\": \"d7236c0e772d4eeeb978\",\r\n        \"user_id\": \"a62c6bb0bc86324ab77e3cf6ef18a26e\"\r\n    },\r\n    \"page\": {\r\n        \"pageNum\": 1,\r\n        \"size\": 10\r\n    },\r\n    \"statisticsId\": \"1936303774240153601\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/api/vms/face/v3/queryFaceImportImageDetail",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "api",
+            "vms",
+            "face",
+            "v3",
+            "queryFaceImportImageDetail"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

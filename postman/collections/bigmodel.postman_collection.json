@@ -1,0 +1,277 @@
+{
+  "info": {
+    "_postman_id": "717f2ae5-a3c3-43a8-be64-312cfb86d9ef",
+    "name": "bigmodel",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "productList",
+      "id": "feb35402-3ba9-497a-8756-dbc4e0776798",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "bigmodel",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"seqno\": \"202503211436337165519626589838\",\r\n        \"user_id\": \"1ab627686b633cd4bfdf19864106880e\",\r\n        \"token\": \"6c45efaad067483eb774\",\r\n        \"device_list\": \"HC4CNJZ26DXX9LCX111A\",\r\n        \"package_name\": \"com.qiaoan.qiaoanzhilian\",\r\n        \"client_version\": \"4.2.62\"\r\n    },\r\n    \"home_name\": \"新云存储\",\r\n    \"page_type\": \"0\",\r\n    \"vas_type\": \"17\",\r\n    \"card_ticket_type\": \"\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://dubbotest.jooancloud.com/v4/vas/alg/model/productList",
+          "protocol": "https",
+          "host": [
+            "dubbotest",
+            "jooancloud",
+            "com"
+          ],
+          "path": [
+            "v4",
+            "vas",
+            "alg",
+            "model",
+            "productList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "unbindAlgPkg",
+      "id": "fe49ee18-2a87-4770-b10e-d9d287ad58f7",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "bigmodel",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"header\": {\r\n    \"device_list\": [\r\n      \"1RLDUVU7GX5T5UW9111A\"\r\n    ],\r\n    \"seqno\": \"202504101038329615609885393130\",\r\n    \"user_id\": \"613034897222351d8edf02e79d4640ec\",\r\n    \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n    \"language\": \"zh_CN\",\r\n    \"client_version\": \"5.3.19.60\",\r\n    \"token\": \"4f6bac3e9b9240689cc4\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://dubbotest.jooancloud.com/v4/vas/alg/model/unbindAlgPkg",
+          "protocol": "https",
+          "host": [
+            "dubbotest",
+            "jooancloud",
+            "com"
+          ],
+          "path": [
+            "v4",
+            "vas",
+            "alg",
+            "model",
+            "unbindAlgPkg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "my_vas_pkg",
+      "id": "e707042e-d9dd-4b31-aa03-2d3732c64a50",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "bigmodel",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"client_version\": \"4.2.63\",\r\n        \"phone_model\": \"iPhone\",\r\n        \"language\": \"zh_CN\",\r\n        \"seqno\": \"202504111348375552884071101914\",\r\n        \"user_id\": \"613034897222351d8edf02e79d4640ec\",\r\n        \"token\": \"348ae495809740ffbc5b\",\r\n        \"package_name\": \"com.qiaoan.qiaoanzhilian\",\r\n        \"device_list\": [\r\n            \"1RLDUVU7GX5T5UW9111A\",\r\n            \"63919T3MENSUXG1E111A\",\r\n            \"YF87AAAAAAAAUGM3052A\"\r\n        ]\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://dubbotest.jooancloud.com/v2/pay/my_vas_pkg",
+          "protocol": "https",
+          "host": [
+            "dubbotest",
+            "jooancloud",
+            "com"
+          ],
+          "path": [
+            "v2",
+            "pay",
+            "my_vas_pkg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listWarnMsgV3",
+      "id": "dd00c558-c412-4001-8673-19d40267d1e8",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "bigmodel",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"1RLDUVU7GX5T5UW9111A\"\r\n        ],\r\n        \"seqno\": \"202504241737210314632528704129\",\r\n        \"user_id\": \"01329f39e27e3c0f9e56d312460e6467\",\r\n        \"token\": \"60971a769f9149b0ab8f\"\r\n    },\r\n    \"page\": {\r\n        \"from\": 0,\r\n        \"index\": 0,\r\n        \"mode\": 1,\r\n        \"nextStartRowKey\": \"\",\r\n        \"size\": 20\r\n    },\r\n    \"warn_date\": \"20250424\",\r\n    \"keywords\": \"电脑\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://dubbotest.jooancloud.com/v3/event/listWarnMsg",
+          "protocol": "https",
+          "host": [
+            "dubbotest",
+            "jooancloud",
+            "com"
+          ],
+          "path": [
+            "v3",
+            "event",
+            "listWarnMsg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listWarnMsgV3 prod",
+      "id": "4cc3a7b8-c76c-404a-a97f-f48fa50cca32",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "bigmodel",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"warn_date\": \"20250429\",\r\n    \"page\": {\r\n        \"mode\": \"1\",\r\n        \"size\": \"20\",\r\n        \"index\": \"1\",\r\n        \"nextStartRowKey\": \"\"\r\n    },\r\n    \"isIncluded\": \"0\",\r\n    \"keywords\": \"\",\r\n    \"bm_warn_type\": \"\",\r\n    \"eid\": \"\",\r\n    \"system_version\": \"16.6.1\",\r\n    \"header\": {\r\n        \"language\": \"zh_CN\",\r\n        \"seqno\": \"202504291100358068560830854456\",\r\n        \"token\": \"d6a636c95430473fae8e\",\r\n        \"user_id\": \"3bf5cc6295113235b02cdb6e4ae9d894\",\r\n        \"device_list\": [\r\n            \"C1UGDBA1NZ6344W4111A\"\r\n        ],\r\n        \"package_name\": \"com.qiaoan.qiaoanzhilian\",\r\n        \"client_version\": \"4.2.85\",\r\n        \"phone_model\": \"iPhone\"\r\n    },\r\n    \"app_version\": \"4.2.85\",\r\n    \"phone_model\": \"iPhone\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qadubboapi.jooancloud.com/v3/event/listWarnMsg",
+          "protocol": "https",
+          "host": [
+            "qadubboapi",
+            "jooancloud",
+            "com"
+          ],
+          "path": [
+            "v3",
+            "event",
+            "listWarnMsg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listWarnMsgv2",
+      "id": "1aa491ea-4b98-4d65-b8cb-e48032f7718a",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "face",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"header\": {\r\n                \"device_list\": [\"7ETRWLSTFLM3DXSA111A\"],\r\n                \"seqno\": \"202508141732473156252304680138\",\r\n                \"user_id\": \"a8793bea83323667ad260e720ea1bc5e\",\r\n                \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n                \"language\": \"zh_CN\",\r\n                \"client_version\": \"5.3.20.15\",\r\n                \"token\": \"02183deef8104d33bf6a\",\r\n                \"phone_model\": \"MEIZU 20\"\r\n        },\r\n        \"warn_date\": \"20250814\",\r\n        \"page\": {\r\n                \"mode\": 1,\r\n                \"from\": 0,\r\n                \"size\": 20,\r\n                \"index\": 1\r\n        }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v2/event/list_warn_msg",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v2",
+            "event",
+            "list_warn_msg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listWarnMsgv2 prod",
+      "id": "0befb838-409d-4e3a-93b2-939f38625092",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "bigmodel",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"warn_date\": \"20250424\",\r\n    \"page\": {\r\n        \"mode\": 1,\r\n        \"size\": 20,\r\n        \"index\": 0,\r\n        \"from\": 0\r\n    },\r\n    \"bm_warn_type\": null,\r\n    \"system_version\": 17.1,\r\n    \"header\": {\r\n        \"language\": \"zh_CN\",\r\n        \"seqno\": \"202504241945210860024454131422\",\r\n        \"token\": \"6d129da26b324d40b641\",\r\n        \"user_id\": \"db3dc24efa4e3273ba09b59e31187c6d\",\r\n        \"device_list\": [\r\n            \"1RLDUVU7GX5T5UW9111A\"\r\n        ],\r\n        \"package_name\": \"com.qiaoan.qiaoanzhilian\",\r\n        \"client_version\": \"4.2.81\",\r\n        \"phone_model\": \"iPhone\"\r\n    },\r\n    \"app_version\": \"4.2.81\",\r\n    \"phone_model\": \"iPhone\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://dubbotest.jooancloud.com/v2/event/list_warn_msg",
+          "protocol": "https",
+          "host": [
+            "dubbotest",
+            "jooancloud",
+            "com"
+          ],
+          "path": [
+            "v2",
+            "event",
+            "list_warn_msg"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

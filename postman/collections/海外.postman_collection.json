@@ -1,0 +1,435 @@
+{
+  "info": {
+    "_postman_id": "5b95c999-4e59-4367-85ce-c257df26d571",
+    "name": "海外",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "获取缩略图",
+      "id": "12f38f10-5925-4fd8-abe8-58045553804c",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"date\": \"2025-09-18\",\r\n  \"event_type\": -1,\r\n  \"flush\": \"0\",\r\n  \"size\": \"50\",\r\n  \"marker\": \"\",\r\n  \"header\": {\r\n    \"device_list\": [\r\n      \"74TZFNTY521UFY2J111A\"\r\n    ],\r\n    \"seqno\": \"202509181514281742074804980499\",\r\n    \"user_id\": \"5687101dfefc33beb3d59eccc9c7a0f2\",\r\n    \"package_name\": \"com.jooan.qiaoanzhilian.fmr.gp\",\r\n    \"language\": \"zh_CN\",\r\n    \"client_version\": \"5.4.0.80\",\r\n    \"token\": \"39b7773602d84f4b9367\",\r\n    \"phone_model\": \"BLK-AL80\"\r\n  },\r\n  \"start_event_id\": \"\",\r\n  \"query_mode\": 0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://usw2api-test.jooaniot.com/v2/cs/get_event_images",
+          "protocol": "https",
+          "host": [
+            "usw2api-test",
+            "jooaniot",
+            "com"
+          ],
+          "path": [
+            "v2",
+            "cs",
+            "get_event_images"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取视频",
+      "id": "d973c03a-52f1-422e-a7a7-c63ad26430ce",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"end_point\": \"ap-singapore\",\r\n  \"bucket_name\": \"us-west-2-jooan-video-3days\",\r\n  \"query_type\": 0,\r\n  \"header\": {\r\n    \"client_version\": \"2.0.71\",\r\n    \"phone_model\": \"iPhone\",\r\n    \"language\": \"zh_CN\",\r\n    \"seqno\": \"202511061042259029943903106647\",\r\n    \"user_id\": \"f5ad04a28ab13dfd98982e564414126e\",\r\n    \"token\": \"f508480316f648619904\",\r\n    \"package_name\": \"com.jooan.cam720ja\",\r\n    \"device_list\": [\r\n      \"AFM8FR6W9AFT4BSN111A\"\r\n    ]\r\n  },\r\n  \"event_id\": \"2340071279\",\r\n  \"date\": \"2025-11-05\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://usw2api-test.jooaniot.com/v2/cs/get_event_video",
+          "protocol": "https",
+          "host": [
+            "usw2api-test",
+            "jooaniot",
+            "com"
+          ],
+          "path": [
+            "v2",
+            "cs",
+            "get_event_video"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取视频(本地)",
+      "id": "36e427d9-4805-401f-8473-2f6429fbfcf2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"end_point\": \"ap-singapore\",\r\n  \"bucket_name\": \"us-west-2-jooan-video-3days\",\r\n  \"query_type\": 0,\r\n  \"header\": {\r\n    \"client_version\": \"2.0.71\",\r\n    \"phone_model\": \"iPhone\",\r\n    \"language\": \"zh_CN\",\r\n    \"seqno\": \"202511061042259029943903106647\",\r\n    \"user_id\": \"f5ad04a28ab13dfd98982e564414126e\",\r\n    \"token\": \"cd19e835e6804438bff5\",\r\n    \"package_name\": \"com.jooan.cam720ja\",\r\n    \"device_list\": [\r\n      \"AFM8FR6W9AFT4BSN111A\"\r\n    ]\r\n  },\r\n  \"event_id\": \"2340071279\",\r\n  \"date\": \"2025-11-05\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8081/v2/cs/get_event_video",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8081",
+          "path": [
+            "v2",
+            "cs",
+            "get_event_video"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取缩略图(本地)",
+      "id": "91416172-4761-4294-a7a4-c3e7a570ebd3",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"date\": \"2025-09-18\",\r\n  \"event_id\": \"2344257343\",\r\n  \"end_point\": \"us-west-2\",\r\n  \"bucket_name\": \"us-west-2-jooan-video-3days\",\r\n  \"header\": {\r\n    \"device_list\": [\r\n      \"74TZFNTY521UFY2J111A\"\r\n    ],\r\n    \"seqno\": \"202509180954574186577768673835\",\r\n    \"user_id\": \"f5ad04a28ab13dfd98982e564414126e\",\r\n    \"package_name\": \"com.jooan.qiaoanzhilian.fmr.gp\",\r\n    \"language\": \"zh_CN\",\r\n    \"client_version\": \"5.4.0.74\",\r\n    \"token\": \"a9ff2bddbbb54a3fbad2\",\r\n    \"phone_model\": \"BLK-AL80\"\r\n  },\r\n  \"query_type\": \"0\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8081/v2/cs/get_event_images",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8081",
+          "path": [
+            "v2",
+            "cs",
+            "get_event_images"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取图片(本地)",
+      "id": "f253f6e1-be81-4754-b67a-459bb7ae9481",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"date\": \"2025-09-18\",\r\n  \"event_id\": \"2344257343\",\r\n  \"end_point\": \"us-west-2\",\r\n  \"bucket_name\": \"us-west-2-jooan-video-3days\",\r\n  \"header\": {\r\n    \"device_list\": [\r\n      \"74TZFNTY521UFY2J111A\"\r\n    ],\r\n    \"seqno\": \"202509180954574186577768673835\",\r\n    \"user_id\": \"f5ad04a28ab13dfd98982e564414126e\",\r\n    \"package_name\": \"com.jooan.qiaoanzhilian.fmr.gp\",\r\n    \"language\": \"zh_CN\",\r\n    \"client_version\": \"5.4.0.74\",\r\n    \"token\": \"a6aa9ffa6e5d49278218\",\r\n    \"phone_model\": \"BLK-AL80\"\r\n  },\r\n  \"query_type\": \"0\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8081/v2/cs/get_event_images",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8081",
+          "path": [
+            "v2",
+            "cs",
+            "get_event_images"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "强制更新",
+      "id": "09331035-04f3-42a8-b5e1-4222048214ec",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"header\": {\r\n    \"device_list\": [\r\n      \"74TZFNTY521UFY2J111A\"\r\n    ],\r\n    \"seqno\": \"202509161535445349213750632941\",\r\n    \"user_id\": \"777d2a7f5b963067b88df1025c17ab16\",\r\n    \"package_name\": \"com.jooan.cam720ja\",\r\n    \"language\": \"zh_CN\",\r\n    \"client_version\": \"5.4.0.74\",\r\n    \"token\": \"a6aa9ffa6e5d49278218\",\r\n    \"phone_model\": \"iPhone\"\r\n  },\r\n  \"openIdAppKey\": \"33945003\"\r\n}    ",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://usw2api-test.jooaniot.com/v5/am/forceRefresh",
+          "protocol": "https",
+          "host": [
+            "usw2api-test",
+            "jooaniot",
+            "com"
+          ],
+          "path": [
+            "v5",
+            "am",
+            "forceRefresh"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "消息列表",
+      "id": "33417cae-51e6-4d02-921b-e8da2a45a531",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"warn_date\": \"20250926\",\r\n  \"header\": {\r\n    \"device_list\": [\r\n      \"1RLDUVU7GX5T5UW9111A\"\r\n    ],\r\n    \"seqno\": \"202509261404533911042061094804\",\r\n    \"user_id\": \"8bb9608efdba3aa5973dbaa751be99ca\",\r\n    \"package_name\": \"com.jooan.qiaoanzhilian.fmr.gp\",\r\n    \"language\": \"zh_CN\",\r\n    \"client_version\": \"5.4.0.74\",\r\n    \"token\": \"d661ed19963e4bdd93e2\",\r\n    \"phone_model\": \"TAS-AN00\"\r\n  },\r\n  \"page\": {\r\n    \"mode\": 1,\r\n    \"size\": 20,\r\n    \"index\": 1,\r\n    \"from\": 0\r\n  },\r\n  \"warn_type\": \"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://usw2api-test.jooaniot.com/v2/event/list_warn_msg",
+          "protocol": "https",
+          "host": [
+            "usw2api-test",
+            "jooaniot",
+            "com"
+          ],
+          "path": [
+            "v2",
+            "event",
+            "list_warn_msg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "消息列表本地",
+      "id": "92f0482b-163e-421e-b761-abbaaa3ceedb",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"warn_date\": \"20250918\",\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"1TK5Y5EG4YSD7YN5111A\"\r\n        ],\r\n        \"seqno\": \"202509181357529016027517586128\",\r\n        \"user_id\": \"8dc261aff2203eada0cddd8455a2308e\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian.fmr.gp\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.4.0.74\",\r\n        \"token\": \"786b47727ece48b1aa67\",\r\n        \"phone_model\": \"PJF110\"\r\n    },\r\n    \"page\": {\r\n        \"mode\": 1,\r\n        \"size\": 20,\r\n        \"index\": 1,\r\n        \"from\": 0\r\n    },\r\n    \"warn_type\": \"0\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8081/v2/event/list_warn_msg",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8081",
+          "path": [
+            "v2",
+            "event",
+            "list_warn_msg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "海外登录",
+      "id": "64cb717f-e337-43b3-8ef6-83a40b2a5284",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"password\": \"YrVGYsuYpa+Fv2oP7QTakg\\u003d\\u003d\",\r\n  \"app_version\": \"5.4.0.90\",\r\n  \"system_version\": \"12\",\r\n  \"package_name\": \"com.jooan.qiaoanzhilian.fmr.gp\",\r\n  \"header\": {\r\n    \"seqno\": \"202509291602448534441586783994\",\r\n    \"package_name\": \"com.jooan.qiaoanzhilian.fmr.gp\",\r\n    \"language\": \"zh_CN\",\r\n    \"client_version\": \"5.4.0.90\",\r\n    \"phone_model\": \"BLK-AL80\"\r\n  },\r\n  \"login_mode\": \"1\",\r\n  \"phone_brand\": \"HUAWEI\",\r\n  \"email\": \"liulei@mailto.plus\",\r\n  \"client_id\": \"NufEfM2TwA76CAqjew6G\",\r\n  \"phone_model\": \"BLK-AL80\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://usw2api-test.jooaniot.com/v3/am/login",
+          "protocol": "https",
+          "host": [
+            "usw2api-test",
+            "jooaniot",
+            "com"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "云存视频收藏(本地)",
+      "id": "a54deacc-7bb3-413c-8e42-ab3a25cf604d",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"source_event_id_list\": \"2339924446\",\r\n    \"source_bucket_name\": \"us-west-2-jooan-video-1day\",\r\n    \"header\": {\r\n        \"client_version\": \"2.0.76\",\r\n        \"phone_model\": \"iPhone\",\r\n        \"language\": \"zh_CN\",\r\n        \"seqno\": \"202511071449566031278714683902\",\r\n        \"user_id\": \"f5ad04a28ab13dfd98982e564414126e\",\r\n        \"token\": \"cd19e835e6804438bff5\",\r\n        \"package_name\": \"com.jooan.cam720ja\",\r\n        \"device_list\": [\r\n            \"H6X8M81PFM2M65NM111A\"\r\n        ] \r\n    },\r\n    \"source_endpoint\": \"us-west-2\",\r\n    \"source_date\": \"2025-11-07\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8081/v3/cs/backup_cs_video",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8081",
+          "path": [
+            "v3",
+            "cs",
+            "backup_cs_video"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "生产时光相册",
+      "id": "d1cb4dc6-4fef-4dfa-91b3-2049f40807f1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"date\": \"2025-11-07\",\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"AFM8FR6W9AFT4BSN111A\"\r\n        ],\r\n        \"seqno\": \"202510200919075252670655204050\",\r\n        \"user_id\": \"f5ad04a28ab13dfd98982e564414126e\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian.fmr.gp\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.4.0.90\",\r\n        \"token\": \"5e98d914ba5d477da3b9\",\r\n        \"phone_model\": \"BLK-AL80\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://usw2api-test.jooaniot.com/v3/cs/create_timeshuttle",
+          "protocol": "https",
+          "host": [
+            "usw2api-test",
+            "jooaniot",
+            "com"
+          ],
+          "path": [
+            "v3",
+            "cs",
+            "create_timeshuttle"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "设备详情",
+      "id": "4888ea66-3d0d-4298-8be3-eab189e06ea2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"client_version\": \"2.1.1\",\r\n        \"phone_model\": \"iPhone\",\r\n        \"language\": \"zh_CN\",\r\n        \"seqno\": \"202511281040435279293105247796\",\r\n        \"user_id\": \"f5ad04a28ab13dfd98982e564414126e\",\r\n        \"token\": \"afcdf358d891469e8607\",\r\n        \"package_name\": \"com.jooan.cam720ja\",\r\n        \"device_list\": [\r\n            \"ST4491E71MLDE3Y5111A\"\r\n        ]\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://usw2api-test.jooaniot.com/v5/da/queryDeviceInfo",
+          "protocol": "https",
+          "host": [
+            "usw2api-test",
+            "jooaniot",
+            "com"
+          ],
+          "path": [
+            "v5",
+            "da",
+            "queryDeviceInfo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "海外设备列表同步",
+      "id": "5da1562d-5588-4607-a9c8-e934bf195493",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"ET34FUYCZHNDHE8W111A\",\r\n            \"JAA627JIN5W8S7A1111A\",\r\n            \"JUkM2f12gZRv8KDZaE4r\",\r\n            \"6V4GDCREZ87K456S111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"9034b4d306ae32cdac7ee36cb6a68186\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"632b9b986b9349d4a983\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://use1api.jooaniot.com/v5/am/syncDeviceList",
+          "protocol": "https",
+          "host": [
+            "use1api",
+            "jooaniot",
+            "com"
+          ],
+          "path": [
+            "v5",
+            "am",
+            "syncDeviceList"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

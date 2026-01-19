@@ -1,0 +1,157 @@
+{
+  "info": {
+    "_postman_id": "2dc92c3a-5edc-4a58-8626-99fcff46abf2",
+    "name": "VMS视频VIP",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "套餐列表接口",
+      "id": "72fdd96a-66af-4281-8f78-20ba1bedba6f",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{am_url}}/v2/pay/product_list",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v2",
+            "pay",
+            "product_list"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取H5页面参数接口",
+      "id": "e74a94fb-a7d0-4c2f-ab87-119bbfad1ebc",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{am_url}}/v2/pay/vas_page",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v2",
+            "pay",
+            "vas_page"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取设备套餐分页查询列表",
+      "id": "e0df01d9-5221-4b2c-9093-1c906706f259",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{am_url}}/v2/pay/vms/pkg/page/info",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v2",
+            "pay",
+            "vms",
+            "pkg",
+            "page",
+            "info"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "VMS套餐绑定接口",
+      "id": "c8fb2df8-14ef-4b0a-9cb0-4256d3d46b92",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{am_url}}/v2/pay/vms/pkg/bind",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v2",
+            "pay",
+            "vms",
+            "pkg",
+            "bind"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "解绑VMS套餐接口",
+      "id": "1fe68a6c-31b1-42e4-a668-4471c2ff7348",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{am_url}}/v2/pay/vms/unbindUserDevicePkg",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v2",
+            "pay",
+            "vms",
+            "unbindUserDevicePkg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "我的套餐列表接口",
+      "id": "f8aa31c6-4d35-43d3-a834-3d257fe5933f",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{am_url}}/v2/pay/my_vas_pkg",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v2",
+            "pay",
+            "my_vas_pkg"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取用户下面的所有绑定和分享的设备接口",
+      "id": "8fc3a221-eed3-4857-8bdc-5d7aa39eb90b",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{am_url}}/v2/pay/vms/device/queryBySort",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v2",
+            "pay",
+            "vms",
+            "device",
+            "queryBySort"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

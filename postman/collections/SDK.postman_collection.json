@@ -1,0 +1,1284 @@
+{
+  "info": {
+    "_postman_id": "76c2d5cb-7907-4b19-aa64-cce26561e2ed",
+    "name": "SDK",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "获取公司token",
+      "id": "69797ed6-87c7-447a-a9da-5a828ac2d112",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk-three-version",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"appId\": \"42b3hmitg3f9pbh8m9f37qmije\",\r\n    \"appSecret\": \"f1h2bm5cada7ro4r1dvhbrfr2v\",\r\n    // \"packageName\": \"com.jooan.qiaoanzhilian\"\r\n    \"packageName\": \"com.jooan.androidmyopendemo\"\r\n    // \"packageName\": \"com.jooan.iosmyopendemo\"\r\n}\r\n\r\n// {\r\n//     \"appId\": \"g3uon7kteuujnfl708t3bbljp1\",\r\n//     \"appSecret\": \"unp6n7phf1d51f7o6crbmv6p9n\",\r\n//     // \"packageName\": \"com.jooan.qiaoanzhilian\"\r\n//     \"packageName\": \"com.jooan.androidmyopendemo\"\r\n//     // \"packageName\": \"com.jooan.iosmyopendemo\"\r\n// }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/auth/getCompanyToken",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "auth",
+            "getCompanyToken"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取用户token",
+      "id": "9b746836-d348-4b6c-b063-a35292bf78a0",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5M2FiNTM2Yi04ZTQ3LTQ0MDAtOWMxZS1kNjE5ZWY2MzkyMzIiLCJpYXQiOjE3NDM1MDg3ODMsImV4cCI6MTc3NTA0NDc4MywicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJhcHBTZWNyZXQiOiIzcDI2ZGhqZHQ0NmtkOThwOXVscGM1ZzNzZCIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjF9fQ.ZE39oTnX7HhxMf19J2P068i9TxDX0fY4eK2EhVDGKFk",
+            "type": "text",
+            "disabled": true
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text",
+            "disabled": true
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk-three-version",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"appId\": \"42b3hmitg3f9pbh8m9f37qmije\",\r\n    \"userAccount\": \"13262253732\",\r\n    // \"packageName\": \"com.jooan.qiaoanzhilian\"\r\n    \"packageName\": \"com.jooan.androidmyopendemo\"\r\n    // \"packageName\": \"com.jooan.iosmyopendemo\"\r\n}\r\n// {\r\n//     \"appId\": \"g3uon7kteuujnfl708t3bbljp1\",\r\n//     \"userAccount\": \"15816522608\",\r\n//     \"packageName\": \"com.jooan.androidmyopendemo\"\r\n// }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/auth/getUserToken",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "auth",
+            "getUserToken"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "验证token",
+      "id": "7da8148e-2ee6-4b6f-8bb2-03e655dab8b0",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI1ZmNlMWVhMi1jMTI1LTQ5OGYtODVhOC1lNjA2M2M1YjJjYjIiLCJpYXQiOjE3NDA1NDA1NzQsImV4cCI6MTc3MjA3NjU3NCwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJhcHBTZWNyZXQiOiIzcDI2ZGhqZHQ0NmtkOThwOXVscGM1ZzNzZCIsInBhY2thZ2VOYW1lIjoiYSIsImdyYW50VHlwZSI6MX19.aDrcEofFeukK_TPrUq3fOXEWjEPT7G_PR4FQZFVmtKE",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/auth/verifyToken",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "auth",
+            "verifyToken"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "刷新token",
+      "id": "8f4bbe2f-9e57-4e0c-ab03-bda514e104a9",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJjb21wYW55SWQiOjE5OTU3NDc2ODYzNTM4NDIxNzgsInNlY3JldElkIjoxOTk1NzQ5MzUxNzM1NzUwNjU4LCJhcHBJZCI6IjQyYjNobWl0ZzNmOXBiaDhtOWYzN3FtaWplIiwiYXBwU2VjcmV0IjoiZjFoMmJtNWNhZGE3cm80cjFkdmhicmZyMnYiLCJncmFudFR5cGUiOjEsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteW9wZW5kZW1vIiwic3ViIjoiNDJiM2htaXRnM2Y5cGJoOG05ZjM3cW1pamUiLCJqdGkiOiI5N2UxYWU5Ni03M2ZiLTRkYWMtOTg5Ny05MjdmYTdhNWZhYzUiLCJpYXQiOjE3NjcwMDEzODgsImV4cCI6MTc2NzI2MDU4OCwibmJmIjoxNzY3MDAxMzg4fQ.9mUNMfKBxPmh51hJkmNmvLS1VB-JI7eQG8TMc-0Xg7s\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/auth/refreshToken",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "auth",
+            "refreshToken"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取mqtt认证token",
+      "id": "60a8af24-74de-45c1-8bd2-3cce8f0fec0d",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJhZjM3Yzc2OC01MzI2LTQwMzktYmNlNS0zMTliZTVjOTI1N2MiLCJpYXQiOjE3NDE2MDcxNTQsImV4cCI6MTc3MzE0MzE1NCwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.jOkdBDWe6BW61gjTI3ykqwBkMmjZAJZzJUEOAZcXen0",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Strict",
+            "value": "true",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/auth/getMqttAuthToken",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "auth",
+            "getMqttAuthToken"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取证书列表",
+      "id": "0fa62620-6831-4a22-af79-51ac296cd58e",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlMjFjZDdiOC0yNjFhLTQwMWQtOGM5MS0zNTIxMWI5M2QwYjciLCJpYXQiOjE3NDE3ODI0MjEsImV4cCI6MTc3MzMxODQyMSwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.7S49AsBC5iIhg0ZS8dyG4FcJ0SR00VxZCxIgav3QBXA",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Strict",
+            "value": "true",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dataList\": [\r\n        {\r\n            \"clusterId\": 1\r\n        },\r\n        {\r\n            \"clusterId\": 0\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/mqtt/getCertificateList",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "mqtt",
+            "getCertificateList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "注册用户",
+      "id": "04119343-2c9a-4eef-8877-5fc5be64ca3e",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiJ9.eyJjb21wYW55SWQiOjE5OTU3NDc2ODYzNTM4NDIxNzgsImFwcElkIjoiNDJiM2htaXRnM2Y5cGJoOG05ZjM3cW1pamUiLCJhcHBTZWNyZXQiOiJmMWgyYm01Y2FkYTdybzRyMWR2aGJyZnIydiIsImdyYW50VHlwZSI6MSwicGFja2FnZU5hbWUiOiJjb20uam9vYW4ucWlhb2FuemhpbGlhbiIsInN1YiI6IjQyYjNobWl0ZzNmOXBiaDhtOWYzN3FtaWplIiwianRpIjoiMGFiZDQ5YTgtYzIwOS00MGE2LWJjNmEtYzk4MDk5YzUxM2JjIiwiaWF0IjoxNzY2NDU3MDE3LCJleHAiOjE3NjY3MTYyMTcsIm5iZiI6MTc2NjQ1NzAxN30.7gIcLLmOVHu_h1XAObF8HqtIAfvVv6ZBXaq3Uf7wZfQ",
+            "type": "text",
+            "disabled": true
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk-three-version",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJjb21wYW55SWQiOjE5OTU3NDc2ODYzNTM4NDIxNzgsInNlY3JldElkIjoxOTk1NzQ5MzUxNzM1NzUwNjU4LCJhcHBJZCI6IjQyYjNobWl0ZzNmOXBiaDhtOWYzN3FtaWplIiwiYXBwU2VjcmV0IjoiZjFoMmJtNWNhZGE3cm80cjFkdmhicmZyMnYiLCJncmFudFR5cGUiOjEsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteW9wZW5kZW1vIiwic3ViIjoiNDJiM2htaXRnM2Y5cGJoOG05ZjM3cW1pamUiLCJqdGkiOiIyNzI1ZDg1OS1jOGYwLTRlN2MtODFlYy0zNjA0Nzc1ZmY5YjMiLCJpYXQiOjE3NjcxNjA2MjUsImV4cCI6MTc2NzQxOTgyNSwibmJmIjoxNzY3MTYwNjI1fQ.xnmCzbGFuTvS66cS_DaPkvQgvLBs_ttSfwTRQ7gMs88\",\r\n        // \"package_name\": \"com.jooan.qiaoanzhilian\"\r\n        \"package_name\": \"com.jooan.androidmyopendemo\"\r\n        // \"package_name\": \"com.jooan.iosmyopendemo\"\r\n    },\r\n    // \"userAccount\": \"13086716076\",\r\n    \"userAccount\": \"15816522608\",\r\n    \"appId\": \"42b3hmitg3f9pbh8m9f37qmije\",\r\n    // \"appId\": \"g3uon7kteuujnfl708t3bbljp1\",\r\n    \"packageName\": \"com.jooan.androidmyopendemo\"\r\n    // \"packageName\": \"com.jooan.iosmyopendemo\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/register",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "登出",
+      "id": "a9fa71e9-162c-4737-8d4f-dd6275cd7b7f",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/logout",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "注销用户",
+      "id": "b6fbc58e-2959-40c7-b26d-d635113f360f",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5M2FiNTM2Yi04ZTQ3LTQ0MDAtOWMxZS1kNjE5ZWY2MzkyMzIiLCJpYXQiOjE3NDM1MDg3ODMsImV4cCI6MTc3NTA0NDc4MywicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJhcHBTZWNyZXQiOiIzcDI2ZGhqZHQ0NmtkOThwOXVscGM1ZzNzZCIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjF9fQ.ZE39oTnX7HhxMf19J2P068i9TxDX0fY4eK2EhVDGKFk",
+            "type": "text",
+            "disabled": true
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text",
+            "disabled": true
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk-three-version",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"seqno\": \"121213131\",\r\n        \"user_id\": \"718b6e123b653131bda63068cf0477c5\",\r\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJjb21wYW55SWQiOjE5OTU3NDc2ODYzNTM4NDIxNzgsInNlY3JldElkIjoxOTk1NzQ5MzUxNzM1NzUwNjU4LCJhcHBJZCI6IjQyYjNobWl0ZzNmOXBiaDhtOWYzN3FtaWplIiwiYXBwU2VjcmV0IjoiZjFoMmJtNWNhZGE3cm80cjFkdmhicmZyMnYiLCJncmFudFR5cGUiOjEsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLnFpYW9hbnpoaWxpYW4iLCJzdWIiOiI0MmIzaG1pdGczZjlwYmg4bTlmMzdxbWlqZSIsImp0aSI6ImIwMmQxMDM0LWY0YTktNDNiMS05NzNiLTdmYzg5ZWZkNjc1MSIsImlhdCI6MTc2NjQ3OTkwOCwiZXhwIjoxNzY2NzM5MTA4LCJuYmYiOjE3NjY0Nzk5MDh9.GLqtxVKLo7C1CuL6kFWCtm_eT7eHaq329bmIAPI4y7w\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/logoff",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "logoff"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "查询用户信息",
+      "id": "355ecb8f-e65f-4e73-9576-d9cdf3ba3080",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlMjFjZDdiOC0yNjFhLTQwMWQtOGM5MS0zNTIxMWI5M2QwYjciLCJpYXQiOjE3NDE3ODI0MjEsImV4cCI6MTc3MzMxODQyMSwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.7S49AsBC5iIhg0ZS8dyG4FcJ0SR00VxZCxIgav3QBXA",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Strict",
+            "value": "true",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/queryUserInfo",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "queryUserInfo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "查询用户习惯",
+      "id": "1d96a683-f75c-4213-bf02-2e57c2692a77",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiM2I1NjM5YS0xMzQ1LTQ0OTUtODc2YS1hOGJkZTkxZWU3NGQiLCJpYXQiOjE3NDA3MDcyMzYsImV4cCI6MTc3MjI0MzIzNiwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzA4NjcxNjA3NiIsInBhY2thZ2VOYW1lIjoiYSIsImdyYW50VHlwZSI6MiwidXNlcklkIjoiZWRhYjM5MjI0MGJhMzY0Mjg3YTg5ODE2ZmJhZjgzZmEifX0.U3ef-458xvDMcirQgtTtN6fomfDTx1z5QZn4MWQ9JiM",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "a",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"deviceList\": [\r\n        \"H6PPZJCEE9LRZS7X111A\",\r\n        \"TUTK01010101ES11BG7VNWE4T3ER111A\"\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/queryUserHabits",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "queryUserHabits"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "设备绑定解绑",
+      "id": "21f8e91f-7360-40c4-ae94-313d9ed4e57f",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlMjFjZDdiOC0yNjFhLTQwMWQtOGM5MS0zNTIxMWI5M2QwYjciLCJpYXQiOjE3NDE3ODI0MjEsImV4cCI6MTc3MzMxODQyMSwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.7S49AsBC5iIhg0ZS8dyG4FcJ0SR00VxZCxIgav3QBXA",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Strict",
+            "value": "true",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"operation\": \"0\",\r\n    \"deviceId\": \"GVU1DAMNRSRQ3727111A\",\r\n    \"deviceSk\":\"86218accab299b54\",\r\n    \"deviceName\":\"123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/deviceBindUnbind",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "deviceBindUnbind"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "设备绑定进度查询",
+      "id": "b666d9a1-6476-4912-a95e-a5990d181366",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlMjFjZDdiOC0yNjFhLTQwMWQtOGM5MS0zNTIxMWI5M2QwYjciLCJpYXQiOjE3NDE3ODI0MjEsImV4cCI6MTc3MzMxODQyMSwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.7S49AsBC5iIhg0ZS8dyG4FcJ0SR00VxZCxIgav3QBXA",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Strict",
+            "value": "true",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"deviceId\": \"H6PPZJCEE9LRZS7X111A\",\r\n    \"deviceSk\": \"7700521a94b0a18b\",\r\n    \"bindCert\": \"\",\r\n    \"enableVerify\": \"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/queryDeviceAccessProgress",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "queryDeviceAccessProgress"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "申请绑定token",
+      "id": "0a338839-32b0-46bd-ab73-d401c57aa05f",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiM2I1NjM5YS0xMzQ1LTQ0OTUtODc2YS1hOGJkZTkxZWU3NGQiLCJpYXQiOjE3NDA3MDcyMzYsImV4cCI6MTc3MjI0MzIzNiwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzA4NjcxNjA3NiIsInBhY2thZ2VOYW1lIjoiYSIsImdyYW50VHlwZSI6MiwidXNlcklkIjoiZWRhYjM5MjI0MGJhMzY0Mjg3YTg5ODE2ZmJhZjgzZmEifX0.U3ef-458xvDMcirQgtTtN6fomfDTx1z5QZn4MWQ9JiM",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "a",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"appVersion\": \"\",\r\n    \"phoneModel\": \"\",\r\n    \"systemVersion\": \"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/applyBindToken",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "applyBindToken"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "验证绑定token",
+      "id": "5a19a7e8-d421-4539-b422-fb334a132b66",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiM2I1NjM5YS0xMzQ1LTQ0OTUtODc2YS1hOGJkZTkxZWU3NGQiLCJpYXQiOjE3NDA3MDcyMzYsImV4cCI6MTc3MjI0MzIzNiwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzA4NjcxNjA3NiIsInBhY2thZ2VOYW1lIjoiYSIsImdyYW50VHlwZSI6MiwidXNlcklkIjoiZWRhYjM5MjI0MGJhMzY0Mjg3YTg5ODE2ZmJhZjgzZmEifX0.U3ef-458xvDMcirQgtTtN6fomfDTx1z5QZn4MWQ9JiM",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "a",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"bindToken\": \"b708e8fbd167309784542e1fd36d027c\",\r\n    \"deviceId\": \"11\",\r\n    \"devicePassword\": \"123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/declareBindToken",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "declareBindToken"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "设备分享",
+      "id": "4d333ed6-c40c-4e71-896d-8f33425ba150",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiM2I1NjM5YS0xMzQ1LTQ0OTUtODc2YS1hOGJkZTkxZWU3NGQiLCJpYXQiOjE3NDA3MDcyMzYsImV4cCI6MTc3MjI0MzIzNiwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzA4NjcxNjA3NiIsInBhY2thZ2VOYW1lIjoiYSIsImdyYW50VHlwZSI6MiwidXNlcklkIjoiZWRhYjM5MjI0MGJhMzY0Mjg3YTg5ODE2ZmJhZjgzZmEifX0.U3ef-458xvDMcirQgtTtN6fomfDTx1z5QZn4MWQ9JiM",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "a",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"operation\": \"0\",\r\n    \"deviceId\": \"KD5K471MDDRL2NFP111A\",\r\n    \"shareUser\": \"qiao1@mailto.plus\",\r\n    \"sharePermissions\": \"[201,202,203,204,205]\",\r\n    \"solution\": \"JOOAN\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/deviceShare",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "deviceShare"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "设备分享设备分享统计",
+      "id": "ab06db1a-80ef-465c-b148-68a91c481805",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiM2I1NjM5YS0xMzQ1LTQ0OTUtODc2YS1hOGJkZTkxZWU3NGQiLCJpYXQiOjE3NDA3MDcyMzYsImV4cCI6MTc3MjI0MzIzNiwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzA4NjcxNjA3NiIsInBhY2thZ2VOYW1lIjoiYSIsImdyYW50VHlwZSI6MiwidXNlcklkIjoiZWRhYjM5MjI0MGJhMzY0Mjg3YTg5ODE2ZmJhZjgzZmEifX0.U3ef-458xvDMcirQgtTtN6fomfDTx1z5QZn4MWQ9JiM",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "a",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"shareUser\": \"qiao1@mailto.plus\",\r\n    \"deviceId\": \"KD5K471MDDRL2NFP111A\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/deviceShareCount",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "deviceShareCount"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "设备分享用户列表",
+      "id": "d1278454-7fa8-4b12-b9e1-57fc4eef51b4",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiM2I1NjM5YS0xMzQ1LTQ0OTUtODc2YS1hOGJkZTkxZWU3NGQiLCJpYXQiOjE3NDA3MDcyMzYsImV4cCI6MTc3MjI0MzIzNiwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzA4NjcxNjA3NiIsInBhY2thZ2VOYW1lIjoiYSIsImdyYW50VHlwZSI6MiwidXNlcklkIjoiZWRhYjM5MjI0MGJhMzY0Mjg3YTg5ODE2ZmJhZjgzZmEifX0.U3ef-458xvDMcirQgtTtN6fomfDTx1z5QZn4MWQ9JiM",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "a",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"deviceList\": [\r\n        \"KD5K471MDDRL2NFP111A\"\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/queryDeviceShareUsers",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "queryDeviceShareUsers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "修改设备别名",
+      "id": "a235776b-2265-4fd0-b851-59d8559ad561",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJhMDhkMzk1MC00YTY2LTQ5N2MtYWE1MC03YmM1MjAxZjNhZDMiLCJpYXQiOjE3NDEwNTk1MjUsImV4cCI6MTc3MjU5NTUyNSwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.Fx4gPJbS7PCHrFgY9Q1tTua_rOF-TEjsTaoWBaHHvU4",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"aliasName\": \"13211\",\r\n    \"deviceId\": \"KD5K471MDDRL2NFP111A\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/modifyDeviceAliasName",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "modifyDeviceAliasName"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "设备转移",
+      "id": "e0d11bc0-6f87-43f7-8957-68ba140a445b",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzMWQ3MmFlYS0yNjM1LTQ2MjAtYWRiMy01NTllZDlhNThjMTYiLCJpYXQiOjE3NDMwNjM1NTgsImV4cCI6MTc3NDU5OTU1OCwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.3uPePU8TPBpGNGmWDdsRzHTqfVIhDAI6tCxFnNUN9dc",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"toUser\": \"qiao1@mailto.plus\",\r\n    \"dataTransfer\": \"Y\",\r\n    \"appVersion\": \"5.3.19.39\",\r\n    \"phoneModel\": \"SM-G9910\",\r\n    \"systemVersion\": \"14\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/deviceTransfer",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "deviceTransfer"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "设备推送率上报",
+      "id": "30160f0c-bc90-4fdf-9488-ad0c4824babc",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiM2I1NjM5YS0xMzQ1LTQ0OTUtODc2YS1hOGJkZTkxZWU3NGQiLCJpYXQiOjE3NDA3MDcyMzYsImV4cCI6MTc3MjI0MzIzNiwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzA4NjcxNjA3NiIsInBhY2thZ2VOYW1lIjoiYSIsImdyYW50VHlwZSI6MiwidXNlcklkIjoiZWRhYjM5MjI0MGJhMzY0Mjg3YTg5ODE2ZmJhZjgzZmEifX0.U3ef-458xvDMcirQgtTtN6fomfDTx1z5QZn4MWQ9JiM",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "a",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"pushRate\": 12,\r\n    \"deviceId\": \"H6PPZJCEE9LRZS7X111A\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/reportDevicePushRate",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "reportDevicePushRate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "设置设备报警类型",
+      "id": "2ba74848-5bb5-4ceb-b4e8-c4f9b042d297",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiM2I1NjM5YS0xMzQ1LTQ0OTUtODc2YS1hOGJkZTkxZWU3NGQiLCJpYXQiOjE3NDA3MDcyMzYsImV4cCI6MTc3MjI0MzIzNiwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzA4NjcxNjA3NiIsInBhY2thZ2VOYW1lIjoiYSIsImdyYW50VHlwZSI6MiwidXNlcklkIjoiZWRhYjM5MjI0MGJhMzY0Mjg3YTg5ODE2ZmJhZjgzZmEifX0.U3ef-458xvDMcirQgtTtN6fomfDTx1z5QZn4MWQ9JiM",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "a",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"warnType\": \"22\",\r\n    \"deviceId\": \"H6PPZJCEE9LRZS7X111A\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/setPushWarnType",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "setPushWarnType"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "查询设备升级任务",
+      "id": "97a5315b-b9ae-4010-a31f-2fd88bcb8c3d",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjYzJlYjI0ZS1mNGFkLTQ5YjYtYTlmZC01ODExMDBkZDFlY2YiLCJpYXQiOjE3NDM1MDg3NjYsImV4cCI6MTc3NTA0NDc2NiwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.v_BXYDKpG_TEE0hYLE4t_kSnjXBAB5mR33z207L2HJ8",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"deviceId\": \"9RYH9YXYWACDK933111A\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/queryDeviceUpgradeTask",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "queryDeviceUpgradeTask"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "查询设备列表",
+      "id": "b0cd2059-f468-4867-8b99-34b9576739cc",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkNDZjMmFjZC0yNTVlLTRlNTMtOWYyMS04YjZlZDcyNmQ0YWIiLCJpYXQiOjE3NDQ0NDExMzMsImV4cCI6MTc3NTk3NzEzMywicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.TyanZopEew67AKUwy9Di5MVsVhEpnih2hjwci7PJl3Q",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"groupingId\": \"\",\r\n    \"deviceName\": \"\",\r\n    \"deviceId\": \"\",\r\n    \"page\": {\r\n        \"nextStartRowKey\": \"\",\r\n        \"size\": \"100\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/queryDeviceList",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "queryDeviceList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "查询设备分组列表",
+      "id": "ca851e95-9c15-4829-ae16-adf5e1e15006",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiM2I1NjM5YS0xMzQ1LTQ0OTUtODc2YS1hOGJkZTkxZWU3NGQiLCJpYXQiOjE3NDA3MDcyMzYsImV4cCI6MTc3MjI0MzIzNiwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzA4NjcxNjA3NiIsInBhY2thZ2VOYW1lIjoiYSIsImdyYW50VHlwZSI6MiwidXNlcklkIjoiZWRhYjM5MjI0MGJhMzY0Mjg3YTg5ODE2ZmJhZjgzZmEifX0.U3ef-458xvDMcirQgtTtN6fomfDTx1z5QZn4MWQ9JiM",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "a",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"page\": {\r\n        \"nextStartRowKey\": \"\",\r\n        \"size\": \"100\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/queryGroupingDeviceList",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "queryGroupingDeviceList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "查询报警图片信息",
+      "id": "0fbaf6fe-a242-49cd-b48e-19ef04df42e5",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjZTZhNDViNC1hMjBjLTQzNDEtOGE0NC03NTc5NzA2ZThmOWMiLCJpYXQiOjE3NDEyMzA2NjUsImV4cCI6MTc3Mjc2NjY2NSwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.BmtQeG8OgQifZo5UKezTVJjdfO2R9Kv6apVz8JwWe3Q",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"deviceId\": \"JTYMCPRFRGD226LT111A\",\r\n    \"date\": \"2025-03-04\",\r\n    \"flush\": \"1\",\r\n    \"size\": \"50\",\r\n    \"startEventId\": \"2361347214\",\r\n    \"marker\": \"\",\r\n    \"queryMode\": 0,\r\n    \"imageFiles\": null,\r\n    \"eventQuery\": \"\",\r\n    \"appVersion\": \"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/cs/getEventImages",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "cs",
+            "getEventImages"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "查询设备分组列表",
+      "id": "9620b500-4dba-474a-834e-3e8467869a6e",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjZTZhNDViNC1hMjBjLTQzNDEtOGE0NC03NTc5NzA2ZThmOWMiLCJpYXQiOjE3NDEyMzA2NjUsImV4cCI6MTc3Mjc2NjY2NSwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.BmtQeG8OgQifZo5UKezTVJjdfO2R9Kv6apVz8JwWe3Q",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/sdk/queryGroupingList",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "sdk",
+            "queryGroupingList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "查询设备配置",
+      "id": "1012407e-d227-4477-bf77-3e1c2934abe9",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjMWJmM2U3ZC05YjEyLTQ3NTItOTJiZC0wN2FiZmE4MjlmNWUiLCJpYXQiOjE3NDM2NjE3NDYsImV4cCI6MTc3NTE5Nzc0NiwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.xkP3yi43qlCs-nUuRUEKv_duHtXVX5kSPVSjJNGddVY",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"deviceId\":\"1RLDUVU7GX5T5UW9111A\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/da/queryDeviceSettings",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "da",
+            "queryDeviceSettings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "查询设备详情",
+      "id": "08495161-68a8-4158-904a-d89b24107ebf",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjMWJmM2U3ZC05YjEyLTQ3NTItOTJiZC0wN2FiZmE4MjlmNWUiLCJpYXQiOjE3NDM2NjE3NDYsImV4cCI6MTc3NTE5Nzc0NiwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.xkP3yi43qlCs-nUuRUEKv_duHtXVX5kSPVSjJNGddVY",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"deviceId\":\"1RLDUVU7GX5T5UW9111A\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/da/queryDeviceDetail",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "da",
+            "queryDeviceDetail"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "查询设备信息",
+      "id": "6b0cf456-87cf-42e2-87b6-e183b4325e3b",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjMWJmM2U3ZC05YjEyLTQ3NTItOTJiZC0wN2FiZmE4MjlmNWUiLCJpYXQiOjE3NDM2NjE3NDYsImV4cCI6MTc3NTE5Nzc0NiwicGF5bG9hZE1hcCI6eyJjb21wYW55SWQiOjE4NzUwMjYyMzQwOTE4MzEyOTcsImFwcElkIjoicDNyOTVtZWlhaGEwdms5dnZscDlkMmlmcXAiLCJ1c2VyUGhvbmUiOiIxMzI2MjI1MzczMSIsInBhY2thZ2VOYW1lIjoiY29tLmpvb2FuLmFuZHJvaWRteXNka2RlbW8iLCJncmFudFR5cGUiOjIsInVzZXJJZCI6ImQyZTFlYzZkNzhmMTMyNmE5OTM4YTdjNWRmMmRlNGY0In19.xkP3yi43qlCs-nUuRUEKv_duHtXVX5kSPVSjJNGddVY",
+            "type": "text"
+          },
+          {
+            "key": "packageName",
+            "value": "com.jooan.androidmysdkdemo",
+            "type": "text"
+          },
+          {
+            "key": "X-Route-Tag",
+            "value": "sdk",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"deviceId\":\"1RLDUVU7GX5T5UW9111A\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/openapi/da/queryDeviceInfo",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "openapi",
+            "da",
+            "queryDeviceInfo"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

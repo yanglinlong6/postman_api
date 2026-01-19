@@ -1,0 +1,158 @@
+{
+  "info": {
+    "_postman_id": "103bba47-fd3e-4b4e-9621-16dac24f8a72",
+    "name": "JOOAN",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "test",
+      "id": "8c6163e1-7038-4708-b764-5a29d1223fb4",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "绑定流量",
+      "id": "74a2e702-f862-416c-ab2f-c0f8bf706145",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"pkg_id\": \"7296353\",\r\n    \"header\": {\r\n        \"client_version\": \"4.1.94\",\r\n        \"phone_model\": \"iPhone\",\r\n        \"language\": \"zh_CN\",\r\n        \"seqno\": \"202410281951569242181603688820\",\r\n        \"user_id\": \"4fef3f2cb5db3741a9cdc8bfa5748485\",\r\n        \"token\": \"4a8823c123624d67b3ca\",\r\n        \"package_name\": \"com.qiaoan.qiaoanzhilian\",\r\n        \"device_list\": [\r\n            \"85ULLYKSVCBLKZJ4111A\"\r\n        ]\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qacloudapi.jooancloud.com/v3/fc/cu_pkg_bind",
+          "protocol": "https",
+          "host": [
+            "qacloudapi",
+            "jooancloud",
+            "com"
+          ],
+          "path": [
+            "v3",
+            "fc",
+            "cu_pkg_bind"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "dsd",
+      "id": "ecb2724b-f825-4772-a767-dd7467e3f18d",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"marker\" : \"\",\r\n  \"header\" : {\r\n    \"client_version\" : \"2.0.33\",\r\n    \"phone_model\" : \"iPhone\",\r\n    \"language\" : \"zh_CN\",\r\n    \"seqno\" : \"202501141721537908532751332167\",\r\n    \"user_id\" : \"b6e6f4a10a9235b3baccacbf7b94dbc1\",\r\n    \"token\" : \"fbafbcc6e1d2487ebc61\",\r\n    \"package_name\" : \"com.jooan.cam720ja\",\r\n    \"device_list\" : [\r\n      \"PL1K8XFJXFBC6CTX111A\"\r\n    ]\r\n  },\r\n  \"flush\" : \"0\",\r\n  \"size\" : \"50\",\r\n  \"query_mode\" : \"0\",\r\n  \"start_event_id\" : \"\",\r\n  \"date\" : \"2025-01-14\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/v2/cs/get_event_images",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "v2",
+            "cs",
+            "get_event_images"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "authlogin",
+      "id": "09e86420-b198-497e-b200-208fec2414ed",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"account\":\"zhangmin\",\r\n    \"hardware_sign\": \"2e72e4a108336a3c86b6aa6f7b8afe78\",\r\n    \"login_type\": 0,\r\n    \"packageName\":\"QiaoAn.TestToolsApp\",\r\n    \"password\":\"87JZBrjYK$BXeGV5\",\r\n    \"seqno\":\"CZORCYSRW25PF7WOAEP4O4VVEUKBGO5E\",\r\n    \"sign\":\"5FCFC0A30C82EF90F06F796EDC588F6FF58DC3F8596F859DD9AD5B7D6296FE7C\",\r\n    \"system_code\":\"tools\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://huiyanapiqa.lenovo.com.cn/v3/pdm/authlogin",
+          "protocol": "https",
+          "host": [
+            "huiyanapiqa",
+            "lenovo",
+            "com",
+            "cn"
+          ],
+          "path": [
+            "v3",
+            "pdm",
+            "authlogin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "authlogin Copy",
+      "id": "6623079e-e83d-48f9-b976-b3623494dd02",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-Route-Tag",
+            "value": "bigmodel",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"client_version\": \"5.3.19.64\",\r\n        \"device_list\": \"1RLDUVU7GX5T5UW9111A\",\r\n        \"language\": \"zh_CN\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"phone_model\": \"PHJ110\",\r\n        \"seqno\": \"202504101610308324323266229661\",\r\n        \"token\": \"923dc60dfa474df59c26\",\r\n        \"user_id\": \"be5b8f06c28a35528faf4d74ada62551\"\r\n    },\r\n    \"product_id\": \"200000003\",\r\n    \"purchase_type\": 1,\r\n    \"app_version\": \"518\",\r\n    \"phone_model\": \"PHJ110\",\r\n    \"system_version\": \"13\",\r\n    \"remark\": \"微信支付\",\r\n    \"phone_os_type\": \"Android\",\r\n    \"cashierInfo\": {\r\n        \"pay_type\": \"0\",\r\n        \"card_ticket_pwd\": \"\",\r\n        \"cash_amount\": 198,\r\n        \"card_ticket_amount\": \"\",\r\n        \"final_amount\": 99\r\n    },\r\n    \"return_url\": \"/qiaoankj/renew_pay_result.html\",\r\n    \"quit_url\": \"/qiaoankj/\",\r\n    \"ext_params\": {\r\n        \"immediately_effect\": \"Y\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://dubbotest.jooancloud.com/v3/vas/sign_wechat_cyclepay",
+          "protocol": "https",
+          "host": [
+            "dubbotest",
+            "jooancloud",
+            "com"
+          ],
+          "path": [
+            "v3",
+            "vas",
+            "sign_wechat_cyclepay"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

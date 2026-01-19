@@ -1,0 +1,55 @@
+{
+  "info": {
+    "_postman_id": "78cf5491-d28d-4704-abe6-332d821d9a8d",
+    "name": "小智AI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "http://192.168.91.131:31107/xiaozhi/ota/",
+      "id": "39c4fc6c-db19-495f-830e-030af5c8f336",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://192.168.91.131:31107/xiaozhi/ota/",
+          "protocol": "http",
+          "host": [
+            "192",
+            "168",
+            "91",
+            "131"
+          ],
+          "port": "31107",
+          "path": [
+            "xiaozhi",
+            "ota",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://192.168.91.131:30997/api/ota",
+      "id": "33bb75b9-08e8-48b3-b069-7e0ff5be4aef",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "xiaozhi-server-go-backend-api-prod.linux008.com/api/ota",
+          "host": [
+            "xiaozhi-server-go-backend-api-prod",
+            "linux008",
+            "com"
+          ],
+          "path": [
+            "api",
+            "ota"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

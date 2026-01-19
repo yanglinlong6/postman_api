@@ -1,0 +1,1428 @@
+{
+  "info": {
+    "_postman_id": "c38cff04-5923-4621-bc90-ddbb7107d428",
+    "name": "智能门锁",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "新增用户",
+      "id": "a043de84-b130-4b90-8bda-5c5c83a1be19",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"type\": 2,\r\n    \"userName\": \"erewrdsafsdfsdfsd\"\r\n} ",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/add_smart_lock_user",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "add_smart_lock_user"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "10765f9e-d885-426d-aaa8-ae5ec95afcf7",
+          "name": "新增用户",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"type\": 2,\r\n    \"userName\": \"erewrdsafsdfsdfsd\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/add_smart_lock_user",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "add_smart_lock_user"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 31 Oct 2024 08:25:16 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\"}"
+        }
+      ]
+    },
+    {
+      "name": "获取智能门锁用户列表",
+      "id": "916af807-cefb-4c71-a66e-4c45e2637e88",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"2EKBD3JVFXBN42T1111A\",\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"15c02ac2b57731d6a2ee34853cd2cf8c\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"33a4d58574434d718281\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"page\": {\r\n        \"mode\": 0,\r\n        \"index\": 1,\r\n        \"size\": 10\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/get_smart_lock_user_list",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "get_smart_lock_user_list"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "bac56aca-f846-45b5-8eaf-db4cc8f0d664",
+          "name": "获取智能门锁用户列表",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"page\": {\r\n        \"mode\": 0,\r\n        \"index\": 1,\r\n        \"size\": 10\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/get_smart_lock_user_list",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "get_smart_lock_user_list"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 31 Oct 2024 08:24:20 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "616"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "HWWAFSESID=f2990733b260b3ad5f; path=/"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "HWWAFSESTIME=1730363060675; path=/"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\",\"deviceSmartLockUserDTOList\":[{\"smartLockUserId\":3,\"userId\":\"57e31ee1248e322ba4e5ed0b37f18a04\",\"uid\":\"3LXPGSZXD373MKP2111A\",\"userName\":\"demoData\",\"type\":1,\"createTime\":1730362815000,\"lastModifyTime\":null},{\"smartLockUserId\":4,\"userId\":\"57e31ee1248e322ba4e5ed0b37f18a04\",\"uid\":\"3LXPGSZXD373MKP2111A\",\"userName\":\"wodadfdsfdsfsdfsdfs\",\"type\":1,\"createTime\":1730362834000,\"lastModifyTime\":null},{\"smartLockUserId\":5,\"userId\":\"57e31ee1248e322ba4e5ed0b37f18a04\",\"uid\":\"3LXPGSZXD373MKP2111A\",\"userName\":\"erewrdsafsdfsdfsd\",\"type\":2,\"createTime\":1730362842000,\"lastModifyTime\":null}]}"
+        }
+      ]
+    },
+    {
+      "name": "更新智能门锁用户",
+      "id": "e6925059-71ca-40dc-b0ce-8a44aed55a7a",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"A1GJRN8GXXZ5CC9X111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"b3720318881344afbdca\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"smartLockUserId\": 2,\r\n    \"userName\":\"11212331312\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/update_smart_lock_user",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "update_smart_lock_user"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "d5d6cfc3-1ce9-4c69-bc7e-c1f90117c69a",
+          "name": "获取智能门锁用户列表",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"page\": {\r\n        \"mode\": 0,\r\n        \"index\": 1,\r\n        \"size\": 10\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/get_smart_lock_user_list",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "get_smart_lock_user_list"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 31 Oct 2024 08:24:20 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "616"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "HWWAFSESID=f2990733b260b3ad5f; path=/"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "HWWAFSESTIME=1730363060675; path=/"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\",\"deviceSmartLockUserDTOList\":[{\"smartLockUserId\":3,\"userId\":\"57e31ee1248e322ba4e5ed0b37f18a04\",\"uid\":\"3LXPGSZXD373MKP2111A\",\"userName\":\"demoData\",\"type\":1,\"createTime\":1730362815000,\"lastModifyTime\":null},{\"smartLockUserId\":4,\"userId\":\"57e31ee1248e322ba4e5ed0b37f18a04\",\"uid\":\"3LXPGSZXD373MKP2111A\",\"userName\":\"wodadfdsfdsfsdfsdfs\",\"type\":1,\"createTime\":1730362834000,\"lastModifyTime\":null},{\"smartLockUserId\":5,\"userId\":\"57e31ee1248e322ba4e5ed0b37f18a04\",\"uid\":\"3LXPGSZXD373MKP2111A\",\"userName\":\"erewrdsafsdfsdfsd\",\"type\":2,\"createTime\":1730362842000,\"lastModifyTime\":null}]}"
+        }
+      ]
+    },
+    {
+      "name": "删除智能门锁用户(废除)",
+      "id": "42f873cb-5b51-4438-aaea-7a9bfafe84f6",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"smartLockUserId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/delete_smart_lock_user",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "delete_smart_lock_user"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "c79d74ff-88d7-42b2-a8d2-615b1c5a35a0",
+          "name": "删除智能门锁用户",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"smartLockUserId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/delete_smart_lock_user",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "delete_smart_lock_user"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 31 Oct 2024 08:27:11 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\"}"
+        }
+      ]
+    },
+    {
+      "name": "保存密码ID",
+      "id": "a2178832-90a4-4a9d-8ad9-8e7c5e37aefe",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"2EKBD3JVFXBN42T1111A\",\r\n            \"GVU1DAMNRSRQ3727111A\",\r\n            \"A1GJRN8GXXZ5CC9X111A\",\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"15c02ac2b57731d6a2ee34853cd2cf8c\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n\r\n\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"9ef3957b10d545ca9e23\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"smartLockUserId\": 1000756,\r\n    \"pwdType\": 1,\r\n    \"pwdId\": 10795121376\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/add_smart_lock_fingerprint",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "add_smart_lock_fingerprint"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "64277dea-1bb7-4917-83a6-5c76af136896",
+          "name": "保存密码ID",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"smartLockUserId\": 1,\r\n    \"pwdType\": 1,\r\n    \"pwdId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/add_smart_lock_fingerprint",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "add_smart_lock_fingerprint"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 31 Oct 2024 08:29:32 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\"}"
+        }
+      ]
+    },
+    {
+      "name": "根据智能门锁用户ID获取只能门锁指纹ID列表(废除)",
+      "id": "be9089e8-b7e5-470a-b1e2-f0a43f9b6cea",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"smartLockUserId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/get_smart_lock_fingerprint_list",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "get_smart_lock_fingerprint_list"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "6c42df9c-144c-4ca1-9a76-7536a69be7f4",
+          "name": "根据智能门锁用户ID获取只能门锁指纹ID列表",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"smartLockUserId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/get_smart_lock_fingerprint_list",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "get_smart_lock_fingerprint_list"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 31 Oct 2024 08:30:57 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "638"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\",\"deviceSmartLockFingerprintDTOList\":[{\"smartLockFingerprintId\":4,\"lockUserId\":1,\"type\":1,\"pwdId\":1,\"createTime\":1730363335000,\"lastModifyTime\":null},{\"smartLockFingerprintId\":5,\"lockUserId\":1,\"type\":1,\"pwdId\":1,\"createTime\":1730363360000,\"lastModifyTime\":null},{\"smartLockFingerprintId\":6,\"lockUserId\":1,\"type\":1,\"pwdId\":1,\"createTime\":1730363371000,\"lastModifyTime\":null},{\"smartLockFingerprintId\":7,\"lockUserId\":1,\"type\":1,\"pwdId\":1,\"createTime\":1730363372000,\"lastModifyTime\":null},{\"smartLockFingerprintId\":8,\"lockUserId\":1,\"type\":1,\"pwdId\":1,\"createTime\":1730363390000,\"lastModifyTime\":null}]}"
+        }
+      ]
+    },
+    {
+      "name": "删除密码ID(废除)",
+      "id": "bb44a48f-8608-4e89-882d-d3c8b9287118",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n   \"smartLockFingerprintId\":1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/delete_smart_lock_fingerprint",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "delete_smart_lock_fingerprint"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "2192621b-5faf-4a95-be5d-186f6b4688aa",
+          "name": "删除密码ID",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n   \"smartLockFingerprintId\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/delete_smart_lock_fingerprint",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "delete_smart_lock_fingerprint"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 31 Oct 2024 08:31:52 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\"}"
+        }
+      ]
+    },
+    {
+      "name": "新增临时密码",
+      "id": "8c8d01af-e0af-4603-8b30-96bcd3ff6b15",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"2EKBD3JVFXBN42T1111A\",\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"15c02ac2b57731d6a2ee34853cd2cf8c\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"fe072da5c134437686a2\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"tempwdType\": 1,\r\n    \"tempwd\": \"demoData\",\r\n    \"effectiveTime\": \"1737426314\",\r\n    \"expiredTime\": \"1737433514\",\r\n    \"week\": \"demoData\",\r\n    \"startTime\": \"demoData\",\r\n    \"endTime\": \"demoData\",\r\n    \"buzSn\": \"1737426314\",\r\n    \"pwdId\": 263\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/add_smart_lock_tempwd",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "add_smart_lock_tempwd"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "b7deae8a-0ac3-40e4-87c6-c103190228fe",
+          "name": "新增临时密码",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"tempwdType\": 1, \r\n    \"tempwd\": \"demoData\",\r\n    \"effectiveTime\": \"2024-10-31 16:32:18\",\r\n    \"expiredTime\": \"2024-10-31 16:32:18\",\r\n    \"week\": \"demoData\",\r\n    \"startTime\": \"demoData\",\r\n    \"endTime\": \"demoData\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/add_smart_lock_tempwd",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "add_smart_lock_tempwd"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 31 Oct 2024 08:54:11 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\"}"
+        }
+      ]
+    },
+    {
+      "name": "查询临时密码列表",
+      "id": "63abbc86-cde3-47db-93ae-7a6e9a3e9445",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"b3720318881344afbdca\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"page\": {\r\n        \"mode\": 0,\r\n        \"index\": 1,\r\n        \"size\": 10\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/get_smart_lock_tempwd_list",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "get_smart_lock_tempwd_list"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "36601006-af5f-4427-8eea-1dac7cac4fe7",
+          "name": "查询临时密码列表",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"page\": {\r\n        \"mode\": 0,\r\n        \"index\": 1,\r\n        \"size\": 10\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/get_smart_lock_tempwd_list",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "get_smart_lock_tempwd_list"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 31 Oct 2024 08:55:14 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\",\"deviceSmartLockTempwdDTOList\":[{\"smartLockTempwdId\":6,\"userId\":\"57e31ee1248e322ba4e5ed0b37f18a04\",\"uid\":\"3LXPGSZXD373MKP2111A\",\"buzSn\":\"c60cac6fe4b23f49bd3fbe768b10ead1\",\"type\":1,\"tempwd\":\"demoData\",\"effectiveTime\":1730363538000,\"expiredTime\":1730363538000,\"week\":\"demoData\",\"startTime\":\"demoData\",\"endTime\":\"demoData\",\"createTime\":1730364839000,\"lastModifyTime\":null,\"shareUrl\":\"c60cac6fe4b23f49bd3fbe768b10ead1\"},{\"smartLockTempwdId\":7,\"userId\":\"57e31ee1248e322ba4e5ed0b37f18a04\",\"uid\":\"3LXPGSZXD373MKP2111A\",\"buzSn\":\"fe8e03ef140b31089cf2a03e801d34a5\",\"type\":1,\"tempwd\":\"demoData\",\"effectiveTime\":1730363538000,\"expiredTime\":1730363538000,\"week\":\"demoData\",\"startTime\":\"demoData\",\"endTime\":\"demoData\",\"createTime\":1730364843000,\"lastModifyTime\":null,\"shareUrl\":\"fe8e03ef140b31089cf2a03e801d34a5\"},{\"smartLockTempwdId\":8,\"userId\":\"57e31ee1248e322ba4e5ed0b37f18a04\",\"uid\":\"3LXPGSZXD373MKP2111A\",\"buzSn\":\"9b6f3695c2ab3562a842984ecf5f9e55\",\"type\":1,\"tempwd\":\"demoData\",\"effectiveTime\":1730363538000,\"expiredTime\":1730363538000,\"week\":\"demoData\",\"startTime\":\"demoData\",\"endTime\":\"demoData\",\"createTime\":1730364844000,\"lastModifyTime\":null,\"shareUrl\":\"9b6f3695c2ab3562a842984ecf5f9e55\"},{\"smartLockTempwdId\":9,\"userId\":\"57e31ee1248e322ba4e5ed0b37f18a04\",\"uid\":\"3LXPGSZXD373MKP2111A\",\"buzSn\":\"f166a2cfe9fa34db90f008efcc1f7d7f\",\"type\":1,\"tempwd\":\"demoData\",\"effectiveTime\":1730363538000,\"expiredTime\":1730363538000,\"week\":\"demoData\",\"startTime\":\"demoData\",\"endTime\":\"demoData\",\"createTime\":1730364850000,\"lastModifyTime\":null,\"shareUrl\":\"f166a2cfe9fa34db90f008efcc1f7d7f\"},{\"smartLockTempwdId\":10,\"userId\":\"57e31ee1248e322ba4e5ed0b37f18a04\",\"uid\":\"3LXPGSZXD373MKP2111A\",\"buzSn\":\"dcff6d50b3ff39babb343f6615cabf32\",\"type\":1,\"tempwd\":\"demoData\",\"effectiveTime\":1730363538000,\"expiredTime\":1730363538000,\"week\":\"demoData\",\"startTime\":\"demoData\",\"endTime\":\"demoData\",\"createTime\":1730364850000,\"lastModifyTime\":null,\"shareUrl\":\"dcff6d50b3ff39babb343f6615cabf32\"},{\"smartLockTempwdId\":11,\"userId\":\"57e31ee1248e322ba4e5ed0b37f18a04\",\"uid\":\"3LXPGSZXD373MKP2111A\",\"buzSn\":\"ce4e6f54cc5938b09764b9983e67fe81\",\"type\":1,\"tempwd\":\"demoData\",\"effectiveTime\":1730363538000,\"expiredTime\":1730363538000,\"week\":\"demoData\",\"startTime\":\"demoData\",\"endTime\":\"demoData\",\"createTime\":1730364870000,\"lastModifyTime\":null,\"shareUrl\":\"ce4e6f54cc5938b09764b9983e67fe81\"}]}"
+        }
+      ]
+    },
+    {
+      "name": "删除临时密码",
+      "id": "ca373dc8-ffc7-4ebe-a058-397b1e76591e",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"smartLockTempwdId\":4\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/delete_smart_lock_tempwd",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "delete_smart_lock_tempwd"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "6bc2d02f-588a-4dbc-8a47-cfe8710bd647",
+          "name": "删除临时密码",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"smartLockTempwdId\":4\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/delete_smart_lock_tempwd",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "delete_smart_lock_tempwd"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 31 Oct 2024 08:56:02 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\"}"
+        }
+      ]
+    },
+    {
+      "name": "分享临时密码",
+      "id": "9f9a71b6-df3a-4104-83aa-a6465c64b52c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"buzSn\": \"63c300b3afb23ba4891b5dd6c128ee81\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/get_smart_lock_tempwd?buzSn=43b3ca774056317ea4cd2319645edab4",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "get_smart_lock_tempwd"
+          ],
+          "query": [
+            {
+              "key": "buzSn",
+              "value": "43b3ca774056317ea4cd2319645edab4"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "fea19510-156e-4dfd-b556-98958f8d13dd",
+          "name": "分享临时密码",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"buzSn\": \"ce4e6f54cc5938b09764b9983e67fe81\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/get_smart_lock_tempwd",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "get_smart_lock_tempwd"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 31 Oct 2024 08:57:54 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "422"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\",\"deviceSmartLockTempwdDTO\":{\"smartLockTempwdId\":11,\"userId\":\"57e31ee1248e322ba4e5ed0b37f18a04\",\"uid\":\"3LXPGSZXD373MKP2111A\",\"buzSn\":\"ce4e6f54cc5938b09764b9983e67fe81\",\"type\":1,\"tempwd\":\"demoData\",\"effectiveTime\":1730363538000,\"expiredTime\":1730363538000,\"week\":\"demoData\",\"startTime\":\"demoData\",\"endTime\":\"demoData\",\"createTime\":1730364870000,\"lastModifyTime\":null,\"shareUrl\":null}}"
+        }
+      ]
+    },
+    {
+      "name": "通过指纹ID获取门锁用户名",
+      "id": "d42c685e-539d-489c-997a-98f4d160e9e9",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"smartLockFingerprintPwdId\": 1\r\n    // \"smartLockFingerprintType\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/get_smart_lock_userName_fingerprintId",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "get_smart_lock_userName_fingerprintId"
+          ]
+        },
+        "description": "This API endpoint allows you to retrieve the smart lock user name associated with a specific fingerprint ID. The HTTP POST request should be made to {{am_url}}/v3/am/get_smart_lock_userName_fingerprintId.\n\n### Request Body\n\nThe request should include the following payload in the raw request body type:\n\n``` json\n{\n    \"header\": {\n        \"device_list\": [\"3LXPGSZXD373MKP2111A\"],\n        \"seqno\": \"202410311607568710959401357102\",\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a ...\",\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\n        \"language\": \"zh_CN\",\n        \"client_version\": \"5.3.18.81\",\n        \"token\": \"76b245c62ee346628c29\",\n        \"phone_model\": \"22120RN86C\"\n    },\n    \"smartLockFingerprintPwdId\": 1,\n    \"smartLockFingerprintType\": 1\n}\n\n ```\n\n### Response\n\nUpon successful execution, the API returns a status code of 200 and a response with the content type of text/plain. The response body contains the following fields:\n\n``` json\n{\n    \"error_code\": \"\",\n    \"error_msg\": \"\",\n    \"smartLockUserName\": \"\"\n}\n\n ```\n\n### Example Response\n\n``` json\n{\n    \"error_code\": \"\",\n    \"error_msg\": \"\",\n    \"smartLockUserName\": \"\"\n}\n\n ```"
+      },
+      "response": [
+        {
+          "id": "7dc1638e-4f08-4f64-9799-068252a852d9",
+          "name": "通过指纹ID获取门锁用户名",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"smartLockFingerprintPwdId\": 1,\r\n    \"smartLockFingerprintType\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/get_smart_lock_userName_fingerprintId",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "get_smart_lock_userName_fingerprintId"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 31 Oct 2024 09:17:35 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "74"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\",\"smartLockUserName\":\"yanglinlong\"}"
+        }
+      ]
+    },
+    {
+      "name": "更新临时密码锁ID",
+      "id": "ab98cc10-3845-4ddb-bf2a-1b3318f93f6a",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"b3720318881344afbdca\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"buzSn\": \"0162e69bb7a63048907d3a21e82a4b01\",\r\n    \"smartLockTempwdLockId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/update_smart_lock_tempwd_lock_id",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "update_smart_lock_tempwd_lock_id"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "72e64507-4615-49b3-bfa8-effeaf7024b4",
+          "name": "更新临时密码锁ID",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"buzSn\": 1,\r\n    \"smartLockTempwdLockId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/update_smart_lock_tempwd_lock_id",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "update_smart_lock_tempwd_lock_id"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 05 Nov 2024 06:31:37 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\"}"
+        }
+      ]
+    },
+    {
+      "name": "删除智能门锁用户",
+      "id": "12c36527-ddbb-431b-83ec-480d1997f702",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"buzType\": 1,\r\n    \"pwdIds\": [\r\n        1,\r\n        2,\r\n        3\r\n    ],\r\n    \"smartLockUserId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/delete_smart_lock_from_mqtt",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "delete_smart_lock_from_mqtt"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "2f58eae9-71d5-492e-9d27-1e45cd5ff43e",
+          "name": "删除智能门锁用户",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"buzType\": 1,\r\n    \"pwdIds\": [\r\n        1,\r\n        2,\r\n        3\r\n    ],\r\n    \"smartLockUserId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/delete_smart_lock_from_mqtt",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "delete_smart_lock_from_mqtt"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 05 Nov 2024 06:32:57 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\"}"
+        }
+      ]
+    },
+    {
+      "name": "更新临时密码锁ID状态",
+      "id": "36b8d23f-5b93-40c1-8015-41ab433844a1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"b3720318881344afbdca\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"smartLockTempwdLockId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/update_smart_lock_one_time_tempwd_status",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "update_smart_lock_one_time_tempwd_status"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "bdc97b7e-51ec-419a-bd89-7cd0b108cac9",
+          "name": "更新临时密码锁ID状态",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"76b245c62ee346628c29\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"smartLockTempwdLockId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/update_smart_lock_one_time_tempwd_status",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "update_smart_lock_one_time_tempwd_status"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Fri, 15 Nov 2024 05:47:40 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\"}"
+        }
+      ]
+    },
+    {
+      "name": "设备唤醒时同步比较并删除多余的脏数据",
+      "id": "39ddd41f-7010-471e-ab3c-834698b22954",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"4NMJ8DH58GC4XLZ1111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"a0d435d288ee336d95927c3d26133645\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"5227457c154d4c5bb415\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"pwdIds\": [123456]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/sync_smart_lock_pwdIds_from_mqtt",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "sync_smart_lock_pwdIds_from_mqtt"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "70517e21-41a9-4c91-8f65-4bcc8edeaea8",
+          "name": "设备唤醒时同步比较并删除多余的脏数据",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"57e31ee1248e322ba4e5ed0b37f18a04\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"b3720318881344afbdca\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"pwdIds\": [1]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{am_url}}/v3/am/sync_smart_lock_pwdIds_from_mqtt",
+              "host": [
+                "{{am_url}}"
+              ],
+              "path": [
+                "v3",
+                "am",
+                "sync_smart_lock_pwdIds_from_mqtt"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "plain",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 19 Nov 2024 09:57:19 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "elb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\"error_code\":\"0\",\"error_msg\":\"success\"}"
+        }
+      ]
+    },
+    {
+      "name": "获取分享链接",
+      "id": "3711c3c1-d85b-4ec7-b3b7-08100c52e995",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"header\": {\r\n        \"device_list\": [\r\n            \"2EKBD3JVFXBN42T1111A\",\r\n            \"GVU1DAMNRSRQ3727111A\",\r\n            \"A1GJRN8GXXZ5CC9X111A\",\r\n            \"3LXPGSZXD373MKP2111A\",\r\n            \"GA22AX9G683KFFL5111A\",\r\n            \"DM3JZEVNKXW6A53N111A\"\r\n        ],\r\n        \"seqno\": \"202410311607568710959401357102\",\r\n        \"user_id\": \"15c02ac2b57731d6a2ee34853cd2cf8c\",\r\n        \"package_name\": \"com.jooan.qiaoanzhilian\",\r\n        \"language\": \"zh_CN\",\r\n        \"client_version\": \"5.3.18.81\",\r\n        \"token\": \"9ef3957b10d545ca9e23\",\r\n        \"phone_model\": \"22120RN86C\"\r\n    },\r\n    \"buzSn\": \"cd9130c6026c3fc5b81abef2e1c5f724\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{am_url}}/v3/am/get_smart_lock_tempwd_share_url",
+          "host": [
+            "{{am_url}}"
+          ],
+          "path": [
+            "v3",
+            "am",
+            "get_smart_lock_tempwd_share_url"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
